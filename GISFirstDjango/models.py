@@ -11,6 +11,7 @@ class TeachingGroup(models.Model):
     students = models.ForeignKey(Person, null=True, on_delete=models.SET_NULL)
     year_group = models.IntegerField(blank=False, null=True)
 
+
 class Student(Person):
     year = models.IntegerField()
     tutor_room = models.CharField(max_length=3, blank=True)
